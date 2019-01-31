@@ -21,6 +21,10 @@ def print_entry_for_n_times(entry_box1,entry_box2):
     for k in range(n):
         print(entry_box1.get())
 
+def a_new_entry_box(frame):
+    a=ttk.Entry(frame)
+    a.grid()
+
 
 def main():
     """ Constructs a GUI with stuff on it. """
@@ -89,7 +93,6 @@ def main():
     button3.grid()
     button3["command"]=lambda:print_entry_for_n_times(a_entry_box,second_entry_box)
 
-    root.mainloop()
     ####################################################################
     # HINT:
     #   You will need to obtain the INTEGER from the STRING
@@ -102,8 +105,12 @@ def main():
     # -------------------------------------------------------------------------
     # DO: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
+    button4=ttk.Button(main_frame,text="Press if you want a entry box")
+    button4.grid()
+    button4["command"]=(lambda:a_new_entry_box(main_frame))
 
 
+    root.mainloop()
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
 # -----------------------------------------------------------------------------
