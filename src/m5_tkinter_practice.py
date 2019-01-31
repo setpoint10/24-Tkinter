@@ -105,7 +105,7 @@ def main():
     # -------------------------------------------------------------------------
     # DO: 8. As time permits, do other interesting GUI things!
     # -------------------------------------------------------------------------
-    button4=ttk.Button(main_frame,text="Press if you want a entry box")
+    button4=ttk.Button(main_frame,text="Do you want a new entry box?")
     button4.grid()
     button4["command"]=(lambda:a_new_entry_box(main_frame))
 
